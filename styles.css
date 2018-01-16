@@ -1,0 +1,11 @@
+* {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+@media (max-width: 770px) {
+  img {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
