@@ -2,10 +2,50 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
-@media (max-width: 770px) {
+@media (min-width: 768px) {
+  img {
+    width: 40vw;
+  }
+
+  h3 {
+    margin: 50px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
   img {
     width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
   }
+
+  .vanish {
+    visibility: hidden;
+  }
+
+  h3 {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+nav, footer {
+  background-color: rgb(230, 30, 30);
+}
+
+footer {
+  margin-top: 30px;
+  padding: 30px;
+  text-align: center;
+}
+
+hr {
+  border-top: 1px solid rgb(43, 0, 0);
+}
+
+.navbar-toggle {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+button {
+  background-color: rgb(51, 119, 255);
 }
