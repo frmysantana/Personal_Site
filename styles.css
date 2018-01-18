@@ -2,6 +2,10 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
+body {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   img {
     width: 40vw;
@@ -11,21 +15,80 @@
     margin: 50px 0;
     text-align: center;
   }
+
+  figcaption {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
+
+  #Me {
+    width: 90%;
+    height: 62vw;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  h3+img {
+    margin: 15px 5% 30px 5%;
+  }
+
   img {
-    width: 90vw;
+    border: 1px solid rgb(43, 0, 0); 
+    width: 90%;
+    height: 45vw;
+    margin: 30px 5%;
   }
 
   .vanish {
-    visibility: hidden;
+    display: none;
+  }
+
+  .appear {
+    display: block;
+  }
+
+  h1 {
+    margin-left: 15px;
+    margin-bottom: 20px;
   }
 
   h3 {
     margin: 10px 0;
     text-align: center;
   }
+
+  input, textarea {
+    border-radius: 2px;
+    border-style: none;
+    font-size: 17px;
+    margin: 8px 15% 8px 0;
+    width: 70%;
+    background-color: rgb(235, 235, 235);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px; 
+  }
+
+  button[type="submit"] {
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin-top: 22px;
+    width: 25%;
+  }
+
+  .fa-github {
+    margin-right: 15%;
+    float: right;
+  }
+
+  .fa-linkedin {
+    margin-left: 15%;
+  }
+
 }
 
 nav, footer {
@@ -40,12 +103,21 @@ footer {
 
 hr {
   border-top: 1px solid rgb(43, 0, 0);
+  margin-top: 20px;
 }
 
 .navbar-toggle {
+  background-color: rgb(51, 119, 255);
   border: 1px solid rgb(0, 0, 0);
+  margin-top: 22px;
+  margin-right: 25px;
+}
+
+.icon-bar {
+  background-color: rgb(255, 255, 255);
 }
 
 button {
   background-color: rgb(51, 119, 255);
+  font-size: 20px;
 }
