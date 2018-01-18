@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
         crossorigin="anonymous">
@@ -37,42 +39,42 @@
                 <h3>About Me</h3>
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
-                        <img src="#" alt="Picture of Myself">
+                        <figure>
+                            <img src="Me.jpeg" alt="Picture of Myself" id="Me">
+                            <figcaption>Click Image.</figcaption>
+                        </figure>
                     </div>
-                    <div class="col-sm-6 vanish">
-                        <p>Hello and welcome to my website.</p>
+                    <div class="col-sm-6">
+                        <p class="vanish">Hello and welcome to my website.</p>
                     </div>
                 </div>
             </div>
             <hr>
             <div id="Projects">
-                <h3>My Projects</h3>
+                <h3>Projects</h3>
                 <img src="FCC Twitch API Project.png" alt="">
                 <img src="JavaScript Calculator.png" alt="">
                 <img src="Wikipedia Viewer.png" alt="">
             </div>
             <hr>
             <div id="Contact">
-                <h3>Contact Me</h3>
-    
+                <h3>Contact</h3>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <i class="fa fa-github fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-xs-6">
+                        <i class="fa fa-linkedin fa-5x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
                 <form action="">
-                    <!--Find alternative to divs-->
-                    <div>
-                        <input type="text" placeholder="Name">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Phone (Optional)">
-                    </div>
-                    <div>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message Here.">
-                        </textarea>
-                    </div>
-                    <div>
-                        <button type="submit">Submit</button>
-                    </div>
+                    <input type="text" placeholder="Name" required>
+                    <input type="text" placeholder="Email" required>
+                    <input type="text" placeholder="Phone (Optional)">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message Here." required>
+                    </textarea>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
