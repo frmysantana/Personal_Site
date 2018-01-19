@@ -7,17 +7,103 @@ body {
 }
 
 @media (min-width: 768px) {
+  .nav>li>a:hover {
+    background-color: rgb(51, 119, 255);
+    color: white;
+  }
+
+  li>a {
+    margin-top: 15px;
+    color: rgb(43, 0, 0);
+  }
+
+  figure {
+    float: right;
+  }
+
   img {
+    border: 1px solid rgb(43, 0, 0);
     width: 40vw;
   }
 
+  div>img {
+    height: 20vw;
+  }
+
+  .right {
+    float: right;
+    margin-bottom: 20px;
+  }
+
+  .left {
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  .center {
+    margin-top: 20px;
+    margin-left: 28vw;
+    margin-right: 28vw;
+  }
+
   h3 {
-    margin: 50px 0;
+    margin: 25px 0 25px 0;
     text-align: center;
   }
 
   figcaption {
     display: none;
+  }
+
+  input[placeholder="Name"] {
+    margin-top: 0;
+  }
+
+  input {
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(235, 235, 235);
+    font-size: 20px;
+    width: 40vw;
+    margin-right: 21vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  textarea {
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(235, 235, 235);
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    width: 60vw;
+  }
+
+  button[type="submit"] {
+    position: relative;
+    top: -150px;
+    right: -8.5vw;
+    border-radius: 10px;
+    font-size: 30px;
+    color: white;
+  }
+
+  .fa-github {
+    position: absolute;
+    left: 75vw;
+  }
+
+  .fa-linkedin {
+    position: absolute;
+    left: 25.7vw;
+    top: 9.9vw;
   }
 }
 
@@ -49,11 +135,6 @@ body {
 
   .appear {
     display: block;
-  }
-
-  h1 {
-    margin-left: 15px;
-    margin-bottom: 20px;
   }
 
   h3 {
@@ -91,11 +172,22 @@ body {
 
 }
 
+h1 {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
 nav, footer {
   background-color: rgb(230, 30, 30);
 }
 
+.navbar {
+  border-bottom: 2px solid rgb(43, 0, 0);
+  border-radius: 0;
+}
+
 footer {
+  border-top: 2px solid rgb(43, 0, 0);
   margin-top: 30px;
   padding: 30px;
   text-align: center;
@@ -103,7 +195,7 @@ footer {
 
 hr {
   border-top: 1px solid rgb(43, 0, 0);
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .navbar-toggle {
