@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fremy's Website</title>
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -52,9 +53,19 @@
             <hr>
             <div id="Projects">
                 <h3>Projects</h3>
-                <img src="FCC Twitch API Project.png" alt="">
-                <img src="JavaScript Calculator.png" alt="">
-                <img src="Wikipedia Viewer.png" alt="">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="FCC Twitch API Project.png" alt="" class="right">
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="JavaScript Calculator.png" alt="" class="left">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="Wikipedia Viewer.png" alt="" class="center">
+                    </div>
+                </div> 
             </div>
             <hr>
             <div id="Contact">
@@ -72,8 +83,7 @@
                     <input type="text" placeholder="Name" required>
                     <input type="text" placeholder="Email" required>
                     <input type="text" placeholder="Phone (Optional)">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message Here." required>
-                    </textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message Here." required></textarea>
                     <button type="submit">Submit</button>
                 </form>
             </div>
