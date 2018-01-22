@@ -2,11 +2,53 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
-body {
-  width: 100%;
+.navbar {
+  background-color: rgb(230, 30, 30);
+  border-bottom: 2px solid rgb(43, 0, 0);
+  border-radius: 0;
+}
+
+h1 {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+hr {
+  border-top: 1px solid rgb(43, 0, 0);
+  margin-top: 50px;
+}
+
+footer {
+  background-color: rgb(230, 30, 30);
+  border-top: 2px solid rgb(43, 0, 0);
+  margin-top: 30px;
+  padding: 30px;
+  text-align: center;
+}
+
+.navbar-toggle {
+  background-color: rgb(51, 119, 255);
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 22px;
+  margin-right: 25px;
+}
+
+.icon-bar {
+  background-color: rgb(255, 255, 255);
+}
+
+button {
+  background-color: rgb(51, 119, 255);
+  font-size: 20px;
 }
 
 @media (min-width: 768px) {
+
+  #description {
+    font-size: 20px;
+    margin: 12vw 0;
+  }
+
   .nav>li>a:hover {
     background-color: rgb(51, 119, 255);
     color: white;
@@ -29,7 +71,25 @@ body {
   div>img {
     height: 20vw;
   }
+  
+  .hide {
+    display: none;
+  }
 
+  #project-description {
+    margin: 5vw 30vw;
+    width: 36em;
+    max-width: 100%;
+  }
+
+  /* img + p {
+    
+  } */
+
+   /* {
+    
+  } */
+  
   .right {
     float: right;
     margin-bottom: 20px;
@@ -117,6 +177,12 @@ body {
   figcaption {
     text-align: center;
   }
+  
+  #description {
+    margin: 0 auto;
+    font-size: 17px;
+    width: 90%;
+  }
 
   h3+img {
     margin: 15px 5% 30px 5%;
@@ -169,47 +235,4 @@ body {
   .fa-linkedin {
     margin-left: 15%;
   }
-
-}
-
-h1 {
-  margin-left: 15px;
-  margin-bottom: 20px;
-}
-
-nav, footer {
-  background-color: rgb(230, 30, 30);
-}
-
-.navbar {
-  border-bottom: 2px solid rgb(43, 0, 0);
-  border-radius: 0;
-}
-
-footer {
-  border-top: 2px solid rgb(43, 0, 0);
-  margin-top: 30px;
-  padding: 30px;
-  text-align: center;
-}
-
-hr {
-  border-top: 1px solid rgb(43, 0, 0);
-  margin-top: 50px;
-}
-
-.navbar-toggle {
-  background-color: rgb(51, 119, 255);
-  border: 1px solid rgb(0, 0, 0);
-  margin-top: 22px;
-  margin-right: 25px;
-}
-
-.icon-bar {
-  background-color: rgb(255, 255, 255);
-}
-
-button {
-  background-color: rgb(51, 119, 255);
-  font-size: 20px;
 }
