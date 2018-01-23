@@ -73,7 +73,7 @@ button {
   }
   
   .hide {
-    display: none;
+    visibility: none;
   }
 
   #project-description {
@@ -81,14 +81,6 @@ button {
     width: 36em;
     max-width: 100%;
   }
-
-  /* img + p {
-    
-  } */
-
-   /* {
-    
-  } */
   
   .right {
     float: right;
@@ -100,7 +92,7 @@ button {
     margin-bottom: 20px;
   }
 
-  .center {
+  .center, .selected-project {
     margin-top: 20px;
     margin-left: 28vw;
     margin-right: 28vw;
@@ -193,6 +185,12 @@ button {
     width: 90%;
     height: 45vw;
     margin: 30px 5%;
+  }
+
+  #project-description {
+    margin: 5vw 8vw;
+    width: 36em;
+    max-width: 100%;
   }
 
   .vanish {
