@@ -1,43 +1,44 @@
 $(document).ready(function() {
-  // Trying to store the original classes of the projects so that they
-  // may later be toggled
-  var originalClasses = $("#Projects img").classList;
-  $("#Projects img").map(function(i) {
-    console.log($(this)[i]);
-    // return el.classList;
-  });
-  
   // Toggle image and description when on mobile.  
   $("figure").click(function() {
-      $("figure").addClass("vanish");
-      $("div p").removeClass("vanish");
+      $("figure").addClass("js-hide-mobile");
+      $("div p").removeClass("js-hide-mobile");
   });
 
   $("div p").click(function() {
-      $("div p").addClass("vanish");
-      $("figure").removeClass("vanish");
+      $("div p").addClass("js-hide-mobile");
+      $("figure").removeClass("js-hide-mobile");
   });
 
   // Toggle project description
   $("#Projects img").click(function(e) {
-    var projects = $("#Projects img");
+    var projects = $("#Projects img"), selectedProjIndex;
     
     // Toggle the other projects' visibilities
     for (i = 0; i < projects.length; i++) {
         if (projects[i].id !== e.target.id) {
-          $(projects[i]).parent().toggleClass("hide");
+            $(projects[i]).parent().toggleClass("js-hide-desktop");
+        } else {
+          selectedProjIndex = i + 1;
         }
     }
   
-    // Toggle centering the clicked project and show description
-    if (!e.currentTarget.classList.contains("selected-project")) {
-      $(e.currentTarget).toggleClass();
-      $(e.currentTarget).addClass("selected-project");
+    // Toggle centering the clicked project and showing description
+    if (selectedProjIndex % 2 === 0) {
+      $(e.currentTarget).toggleClass("left");
+      $(e.currentTarget).toggleClass("selected-project");
+    } else if (selectedProjIndex < projects.length) {
+      $(e.currentTarget).toggleClass("right");
+      $(e.currentTarget).toggleClass("selected-project");
     } else {
-      $(e.currentTarget).toggleClass();
+      $(e.currentTarget).toggleClass("center");
+      $(e.currentTarget).toggleClass("selected-project");
     }
 
     var paragraph = $($(e.currentTarget.offsetParent).children()[1]);
-    paragraph.toggleClass("hide");
+    paragraph.toggleClass("js-hide-desktop");
+    // Using a different class because I only want the project description to
+    // change in display, not any of the other projects as well.
+    paragraph.toggleClass("js-hide-mobile");
   });
 });
