@@ -41,12 +41,12 @@
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
                         <figure>
-                            <img src="Me.jpeg" alt="Picture of Myself" id="Me">
+                            <img src="Me.jpeg" alt="Picture of Myself" id="fremy-image">
                             <figcaption>Click Image.</figcaption>
                         </figure>
                     </div>
                     <div class="col-sm-6">
-                        <p class="vanish" id="description">Hello and welcome to my website. 
+                        <p class="js-hide-mobile" id="fremy-description">Hello and welcome to my website. 
                             I am an aspiring Front-End Web Developer living in the northern New Jersey area.
                             Feel free to peruse my projects below and contact me if you'd like more information.</p>
                     </div>
@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="FCC Twitch API Project.png" alt="" class="right" id="TwitchApi">
-                        <p class="hide" id="project-description"> 
+                        <p class="js-hide-desktop js-hide-mobile" id="project-description"> 
                             <a href="#" target="_blank">See project live.</a>
                             <br><br>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac massa 
@@ -92,7 +92,7 @@
                     </div>
                     <div class="col-sm-6">
                         <img src="JavaScript Calculator.png" alt="" class="left" id="Calculator">
-                        <p class="hide" id="project-description"> 
+                        <p class="js-hide-desktop js-hide-mobile" id="project-description"> 
                             <a href="#" target="_blank">See project live.</a>
                             <br><br>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac massa 
@@ -128,7 +128,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <img src="Wikipedia Viewer.png" alt="" class="center" id="Wikipedia">
-                        <p class="hide" id="project-description"> 
+                        <p class="js-hide-desktop js-hide-mobile" id="project-description"> 
                             <a href="#" target="_blank">See project live.</a>
                             <br><br>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac massa 
@@ -175,16 +175,18 @@
                 </div>
                 
                 <form action="mailto:frmysantana@yahoo.com" method="post" enctype="text/plain">
-                    <label>
-                        Name:
+                    <label> <!--Styles were determined before labels were added, so I'm hiding the 
+                        visibility so that the label is still there for accesibility, but doesn't change 
+                        the design-->
+                        <span class="js-hide-desktop js-hide-mobile">Name:</span>
                         <input type="text" placeholder="Name" required>
                     </label>
                     <label>
-                        Email:
+                        <span class="js-hide-desktop js-hide-mobile">Email:</span>
                         <input type="email" placeholder="Email" required>
                     </label>
                     <label>
-                        Phone (Optional):
+                        <span class="js-hide-desktop js-hide-mobile">Phone (Optional):</span>
                         <input type="text" placeholder="Phone (Optional)">
                     </label>
                     <textarea name="" id="" cols="30" rows="10" placeholder="Message Here." required></textarea>
@@ -206,7 +208,7 @@
         <script src="scripts.js"></script>
 
         <footer>
-            <p>Designed and Coded by Fremy Santana. Copyright 2018</p>
+            <p>Designed and Coded by Fremy Santana. Copyright 2018.</p>
         </footer>
     </body>
 </html>
