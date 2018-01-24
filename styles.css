@@ -1,21 +1,11 @@
+/*Styles common on all media. Moslty in alphabetical order*/
 * {
-    font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
 }
 
-.navbar {
-  background-color: rgb(230, 30, 30);
-  border-bottom: 2px solid rgb(43, 0, 0);
-  border-radius: 0;
-}
-
-h1 {
-  margin-left: 15px;
-  margin-bottom: 20px;
-}
-
-hr {
-  border-top: 1px solid rgb(43, 0, 0);
-  margin-top: 50px;
+button {
+  background-color: rgb(51, 119, 255);
+  font-size: 20px;
 }
 
 footer {
@@ -26,70 +16,43 @@ footer {
   text-align: center;
 }
 
-.navbar-toggle {
-  background-color: rgb(51, 119, 255);
-  border: 1px solid rgb(0, 0, 0);
-  margin-top: 22px;
-  margin-right: 25px;
+hr {
+  border-top: 1px solid rgb(43, 0, 0);
+  margin-top: 50px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-left: 15px;
 }
 
 .icon-bar {
   background-color: rgb(255, 255, 255);
 }
 
-button {
-  background-color: rgb(51, 119, 255);
-  font-size: 20px;
+.navbar {
+  background-color: rgb(230, 30, 30);
+  border-bottom: 2px solid rgb(43, 0, 0);
+  border-radius: 0;
 }
 
+.navbar-toggle {
+  background-color: rgb(51, 119, 255);
+  border: 1px solid rgb(0, 0, 0);
+  margin-right: 25px;
+  margin-top: 22px;
+}
+
+/*Styles for tablet size and up. Alphabetical order.*/
 @media (min-width: 768px) {
 
-  #description {
-    font-size: 20px;
-    margin: 12vw 0;
-  }
-
-  .nav>li>a:hover {
-    background-color: rgb(51, 119, 255);
+  button[type="submit"] {
+    position: relative;
+    top: -150px;
+    right: -8.5vw;
+    border-radius: 10px;
+    font-size: 30px;
     color: white;
-  }
-
-  li>a {
-    margin-top: 15px;
-    color: rgb(43, 0, 0);
-  }
-
-  figure {
-    float: right;
-  }
-
-  img {
-    border: 1px solid rgb(43, 0, 0);
-    width: 40vw;
-  }
-
-  div>img {
-    height: 20vw;
-  }
-  
-  .hide {
-    visibility: none;
-  }
-
-  #project-description {
-    margin: 5vw 30vw;
-    width: 36em;
-    max-width: 100%;
-  }
-  
-  .right {
-    float: right;
-    margin-bottom: 20px;
-  }
-
-  .left {
-    float: left;
-    margin-bottom: 20px;
   }
 
   .center, .selected-project {
@@ -98,17 +61,42 @@ button {
     margin-right: 28vw;
   }
 
-  h3 {
-    margin: 25px 0 25px 0;
-    text-align: center;
+  div>img {
+    height: 20vw;
+  }
+
+  .fa-github {
+    position: absolute;
+    left: 75vw;
+  }
+
+  .fa-linkedin {
+    position: absolute;
+    left: 25.7vw;
+    top: 9.9vw;
   }
 
   figcaption {
     display: none;
   }
 
-  input[placeholder="Name"] {
-    margin-top: 0;
+  figure {
+    float: right;
+  }
+
+  #fremy-description {
+    font-size: 20px;
+    margin: 12vw 0;
+  }
+
+  h3 {
+    margin: 25px 0 25px 0;
+    text-align: center;
+  }
+
+  img {
+    border: 1px solid rgb(43, 0, 0);
+    width: 40vw;
   }
 
   input {
@@ -125,6 +113,40 @@ button {
     padding-bottom: 5px;
   }
 
+  input[placeholder="Name"] {
+    margin-top: 0;
+  }
+
+  .js-hide-desktop {
+    display: none;
+  }
+
+  .left {
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  li>a {
+    margin-top: 15px;
+    color: rgb(43, 0, 0);
+  }
+
+  .nav>li>a:hover {
+    background-color: rgb(51, 119, 255);
+    color: white;
+  }
+
+  #project-description {
+    margin: 5vw 30vw;
+    width: 36em;
+    max-width: 100%;
+  }
+  
+  .right {
+    float: right;
+    margin-bottom: 20px;
+  }
+
   textarea {
     border-radius: 5px;
     border-style: none;
@@ -137,31 +159,12 @@ button {
     padding-bottom: 15px;
     width: 60vw;
   }
-
-  button[type="submit"] {
-    position: relative;
-    top: -150px;
-    right: -8.5vw;
-    border-radius: 10px;
-    font-size: 30px;
-    color: white;
-  }
-
-  .fa-github {
-    position: absolute;
-    left: 75vw;
-  }
-
-  .fa-linkedin {
-    position: absolute;
-    left: 25.7vw;
-    top: 9.9vw;
-  }
 }
 
+/*Mobile styles*/
 @media (max-width: 767px) {
 
-  #Me {
+  #fremy-image {
     width: 90%;
     height: 62vw;
   }
@@ -170,7 +173,7 @@ button {
     text-align: center;
   }
   
-  #description {
+  #fremy-description {
     margin: 0 auto;
     font-size: 17px;
     width: 90%;
@@ -193,12 +196,8 @@ button {
     max-width: 100%;
   }
 
-  .vanish {
+  .js-hide-mobile {
     display: none;
-  }
-
-  .appear {
-    display: block;
   }
 
   h3 {
