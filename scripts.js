@@ -1,26 +1,48 @@
 $(document).ready(function() {
+
+  // Refresh the page when a transition from tablet-and-up to mobile (or vice 
+  // versa) is detected. Avoids some bugs related to changes on one setting 
+  // affecting the output of the other.
+
+  // window.addEventListener("resize", function() {
+  //   var first = window.innerWidth;
+  //   console.log(first);
+  //   var second = first + 2;
+  //   var third = first - 2;
+  //   if (second >= 768 && third < 767 ) {
+  //     console.log('reloaded');
+  //     location.reload();
+  //   }
+  // });
+
   // Toggle image and description when on mobile.  
   $("figure").click(function() {
-      $("figure").addClass("js-hide-mobile");
-      $("div p").removeClass("js-hide-mobile");
+    if (window.innerWidth <= 768) {
+      $("figure").fadeToggle(200, 'linear');
+      $("div p").delay(200).fadeToggle(200, 'linear');
+    } 
   });
 
   $("div p").click(function() {
-      $("div p").addClass("js-hide-mobile");
-      $("figure").removeClass("js-hide-mobile");
+    if (window.innerWidth <= 768) {
+      $("div p").fadeToggle(200, 'linear');
+      $("figure").delay(200).fadeToggle(200, 'linear');
+    }
   });
 
   // Toggle project description
   $("#Projects img").click(function(e) {
     var projects = $("#Projects img"), selectedProjIndex;
     
-    // Toggle the other projects' visibilities
-    for (i = 0; i < projects.length; i++) {
+    // Toggle the other projects' visibilities on tablet-and-up screen sizes
+    if (window.innerWidth >= 768) {
+      for (i = 0; i < projects.length; i++) {
         if (projects[i].id !== e.target.id) {
-            $(projects[i]).parent().toggleClass("js-hide-desktop");
+            $(projects[i]).parent().fadeToggle(200, 'linear');
         } else {
           selectedProjIndex = i + 1;
         }
+    }
     }
   
     // Toggle centering the clicked project and showing description
@@ -36,9 +58,6 @@ $(document).ready(function() {
     }
 
     var paragraph = $($(e.currentTarget.offsetParent).children()[1]);
-    paragraph.toggleClass("js-hide-desktop");
-    // Using a different class because I only want the project description to
-    // change in display, not any of the other projects as well.
-    paragraph.toggleClass("js-hide-mobile");
+    paragraph.fadeToggle('200', 'linear');
   });
 });
