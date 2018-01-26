@@ -3,6 +3,10 @@
   font-family: 'Libre Franklin', sans-serif;
 }
 
+body {
+  animation-duration: 0.001s;
+}
+
 button {
   background-color: rgb(51, 119, 255);
   font-size: 20px;
@@ -43,8 +47,16 @@ h1 {
   margin-top: 22px;
 }
 
+/* @keyframes min-width-768px {
+  from { clip: rect(1px, auto, auto, auto); }
+  to { clip: rect(0px, auto, auto, auto); } 
+} */
+
 /*Styles for tablet size and up. Alphabetical order.*/
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  /* body {
+    animation-name: min-width-768px;
+  } */
 
   button[type="submit"] {
     position: relative;
@@ -163,7 +175,10 @@ h1 {
 }
 
 /*Mobile styles*/
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  /* body {
+    animation-name: min-width-768px;
+  } */
 
   #fremy-image {
     width: 90%;
