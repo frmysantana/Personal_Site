@@ -1,18 +1,8 @@
 $(document).ready(function() {
-
-  // Refresh the page when a transition from tablet-and-up to mobile (or vice 
-  // versa) is detected. Avoids some bugs related to changes on one setting 
-  // affecting the output of the other.
-
-  // window.addEventListener("resize", function() {
-  //   var first = window.innerWidth;
-  //   console.log(first);
-  //   var second = first + 2;
-  //   var third = first - 2;
-  //   if (second >= 768 && third < 767 ) {
-  //     console.log('reloaded');
-  //     location.reload();
-  //   }
+  // Hack approach. Fix with enquire.js.
+  // document.addEventListener('animationend', function() {
+  //   console.log('reloading');
+  //   location.reload();
   // });
 
   // Toggle image and description when on mobile.  
