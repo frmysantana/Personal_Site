@@ -3,13 +3,18 @@
   font-family: 'Libre Franklin', sans-serif;
 }
 
-body {
-  animation-duration: 0.001s;
-}
-
 button {
   background-color: rgb(51, 119, 255);
   font-size: 20px;
+}
+
+.fa-github {
+  margin-right: 15%;
+  float: right;
+}
+
+.fa-linkedin {
+  margin-left: 15%;
 }
 
 footer {
@@ -47,17 +52,8 @@ h1 {
   margin-top: 22px;
 }
 
-/* @keyframes min-width-768px {
-  from { clip: rect(1px, auto, auto, auto); }
-  to { clip: rect(0px, auto, auto, auto); } 
-} */
-
 /*Styles for tablet size and up. Alphabetical order.*/
 @media screen and (min-width: 768px) {
-  /* body {
-    animation-name: min-width-768px;
-  } */
-
   button[type="submit"] {
     position: relative;
     top: -150px;
@@ -69,6 +65,7 @@ h1 {
 
   .center, .selected-project {
     transition: margin .2s linear .1s;
+    margin-bottom: 20px;
     margin-top: 20px;
     margin-left: 28vw;
     margin-right: 28vw;
@@ -76,17 +73,6 @@ h1 {
 
   div>img {
     height: 20vw;
-  }
-
-  .fa-github {
-    position: absolute;
-    left: 75vw;
-  }
-
-  .fa-linkedin {
-    position: absolute;
-    left: 25.7vw;
-    top: 9.9vw;
   }
 
   figcaption {
@@ -136,7 +122,6 @@ h1 {
 
   .left {
     float: left;
-    margin-bottom: 20px;
   }
 
   li>a {
@@ -157,7 +142,6 @@ h1 {
   
   .right {
     float: right;
-    margin-bottom: 20px;
   }
 
   textarea {
@@ -176,63 +160,6 @@ h1 {
 
 /*Mobile styles*/
 @media screen and (max-width: 767px) {
-  /* body {
-    animation-name: min-width-768px;
-  } */
-
-  #fremy-image {
-    width: 90%;
-    height: 62vw;
-  }
-
-  figcaption {
-    text-align: center;
-  }
-  
-  #fremy-description {
-    margin: 0 auto;
-    font-size: 17px;
-    width: 90%;
-  }
-
-  h3+img {
-    margin: 15px 5% 30px 5%;
-  }
-
-  img {
-    border: 1px solid rgb(43, 0, 0); 
-    width: 90%;
-    height: 45vw;
-    margin: 30px 5%;
-  }
-
-  #project-description {
-    margin: 5vw 8vw;
-    width: 36em;
-    max-width: 100%;
-  }
-
-  .js-hide-mobile {
-    display: none;
-  }
-
-  h3 {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  input, textarea {
-    border-radius: 2px;
-    border-style: none;
-    font-size: 17px;
-    margin: 8px 15% 8px 0;
-    width: 70%;
-    background-color: rgb(235, 235, 235);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px; 
-  }
-
   button[type="submit"] {
     border-radius: 5px;
     color: rgb(255, 255, 255);
@@ -240,12 +167,56 @@ h1 {
     width: 25%;
   }
 
-  .fa-github {
-    margin-right: 15%;
-    float: right;
+  figcaption {
+    text-align: center;
   }
 
-  .fa-linkedin {
-    margin-left: 15%;
+  #fremy-description {
+    font-size: 17px;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  #fremy-image {
+    height: 62vw;
+    width: 90%;
+  }
+
+  h3 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  h3+img {
+    margin: 15px 5% 30px 5%;
+  }
+
+  img {
+    border: 1px solid rgb(43, 0, 0);
+    height: 45vw;
+    margin: 30px 5%;
+    width: 90%;
+  }
+
+  input, textarea {
+    background-color: rgb(235, 235, 235);
+    border-radius: 2px;
+    border-style: none;
+    font-size: 17px;
+    margin: 8px 15% 8px 0;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 70%;
+  }
+
+  .js-hide-mobile {
+    display: none;
+  }
+
+  #project-description {
+    margin: 5vw 8vw;
+    max-width: 100%;
+    width: 36em;
   }
 }
