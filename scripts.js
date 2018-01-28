@@ -1,9 +1,21 @@
 $(document).ready(function() {
   // Hack approach. Fix with enquire.js.
-  // document.addEventListener('animationend', function() {
-  //   console.log('reloading');
-  //   location.reload();
-  // });
+
+  var body = document.querySelector('body');
+  
+  var mql = window.matchMedia('(min-width: 768px)');
+  
+  function screenTest(e) {
+    if (e.matches) {
+      /* the viewport is 768 pixels wide or more */
+      location.reload();
+    } else {
+      /* the viewport is less than than 768 pixels wide */
+      location.reload();
+    }
+  }
+  
+  mql.addListener(screenTest);
 
   // Toggle image and description when on mobile.  
   $("figure").click(function() {
@@ -36,7 +48,7 @@ $(document).ready(function() {
     }
   
     // Toggle centering the clicked project and showing description
-    if (selectedProjIndex % 2 === 0) {
+    if (selectedProjIndex % 2 === 1 ) {
       $(e.currentTarget).toggleClass("left");
       $(e.currentTarget).toggleClass("selected-project");
     } else if (selectedProjIndex < projects.length) {
