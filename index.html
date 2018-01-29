@@ -46,7 +46,7 @@
                         </figure>
                     </div>
                     <div class="col-sm-6">
-                        <p class="js-hide-mobile" id="fremy-description">Hello and welcome to my website. 
+                        <p class="js-hide-mobile" id="fremy-description">Hello, and welcome to my website. 
                             I am an aspiring Front-End Web Developer living in the northern New Jersey area.
                             Feel free to peruse my projects below and contact me if you'd like more information.</p>
                     </div>
@@ -55,20 +55,81 @@
             <hr>
             <div id="Projects">
                 <h3>Projects</h3>
+                <p class="text-center">Click on a project to see a short description and a link to a live version.</p>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <img src="Assets/Wikipedia_Viewer.png" alt="" class="center" id="Wikipedia">
-                        <p class="js-hide-desktop js-hide-mobile" id="project-description">
+                    <div class="col-sm-6">
+                        <img src="Assets/jsCalculator.png" alt="" class="right" id="Calculator">
+                        <p class="js-hide-desktop js-hide-mobile"id="project-description">
                             Click image again to return to the starting list.<br>
-                            <a href="https://htmlpreview.github.io/?https://github.com/frmysantana/WikipediaViewer/blob/master/wikipedia.html"
-                             target="_blank">See project live.</a>
+                            <a href="https://htmlpreview.github.io/?https://github.com/frmysantana/JavaScript_Calculator/blob/master/jsCalculator.html" 
+                            target="_blank">See project live</a>
                             <br><br>
+                            This project was completed as part of the FreeCodeCamp Front-End Development 
+                            certification. The goal was to create a calculator page that allows the user to 
+                            add, subtract, multiply, and divide two numbers. There also had
+                            to be a button that clears the field displaying the numbers and operations. Finally,
+                            the user must be able to chain operations, i.e. to continue inputing more operations
+                            until the equals button is hit and still get the correct answer.
+                            <br><br>
+                            As a challenge to myself, I decided to complete this project without jQuery. This is
+                            because at this point I knew more about how large jQuery was and how it was a bit 
+                            excessive for a project of this type. I also didn't use Bootstrap and tried to use
+                            mainly relative lengths so that the project would be more responsive. Once the basic
+                            HTML and CSS were written, I added event listeners to all of the buttons in order to 
+                            display the charcter of the button in the output field. The only buttons that don't 
+                            do this are the 'AC' and 'CE' buttons, which clear the entire field and the last 
+                            outputed string, respectively, and the '=' button. This final button calls the needed
+                            functions to actually evaluate the expression that the user has created. The calculator
+                            evaluates the expression from left-to-right.
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="Assets/Twitch_Streamers.png" alt="" class="left" id="Twitch">
+                        <p class="js-hide-desktop js-hide-mobile"id="project-description">
+                            Click image again to return to the starting list.<br>
+                            <a href="https://htmlpreview.github.io/?https://github.com/frmysantana/Twitch_API_Project/blob/master/twitch.html" 
+                            target="_blank">See project live</a>
+                            <br><br>
+                            This project was completed for the FreeCodeCamp Front-End certificate. The objective 
+                            was to build a page that connected to the Twitch API to fetch information about 
+                            various streamers, particularly FreeCodeCamp themselves. One needed to use the JSON
+                            in the response to find the user's logo, official username, and current streaming
+                            status. The elements generated with this information also had to link to the user's 
+                            Twitch page. We were also given a sample list of streamers to use, some active all of
+                            the time, and some did not have Twitch profiles. For the ones without profiles, we
+                            had to output something to the effect of "userName no longer has an account."
+                            <br><br>
+                            To complete the project, I used jQuery to make the ajax call to the Twitch API. On the
+                            first call to the API, I check whether the user has an account. If they don't, the name
+                            of the non-existant user is sent to a function that handles the case where the user 
+                            doesn't exit. If they do exist, then the data and username are sent to a different 
+                            function that begins creating the division with the basic information. At the end of this 
+                            function, a second call to the API is made looking for streaming information. This info
+                            is then inserted into the element and finally the completed element is displayed on the 
+                            screen.
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <img src="Assets/Weather_App.png" alt="" class="right" id="Weather">
+                        <img src="Assets/Wikipedia_Viewer.png" alt="" class="right" id="Wikipedia">
+                        <p class="js-hide-desktop js-hide-mobile" id="project-description">
+                            Click image again to return to the starting list.<br>
+                            <a href="https://htmlpreview.github.io/?https://github.com/frmysantana/WikipediaViewer/blob/master/wikipedia.html"
+                                target="_blank">See project live.</a>
+                            <br><br>
+                            Another project in the FreeCodeCamp Front-End Development certification, this project must allow the user
+                            to enter a search term and return Wikipedia articles in response. Each of these
+                            articles must be linked to the actual article on Wikipedia. Additionally, there needed to be a prominent
+                            link one can click on for a random Wikipedia article.<br><br>
+                            I used the Wikipedia API to complete the project. jQuery is used to take the user's search term from the 
+                            input field, encode it, and send an ajax request to the API that asks for 15 results with the needed 
+                            information about each article in the JSON response. That response is then turned into a list of elements
+                            that are appended to the page, each one linking to its full Wikpedia article.  
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="Assets/Weather_App.png" alt="" class="left" id="Weather">
                         <p class="js-hide-desktop js-hide-mobile" id="project-description">
                             Click image again to return to the starting list.<br>
                             <a href="https://htmlpreview.github.io/?https://github.com/frmysantana/WeatherApp/blob/master/weatherApp.html" 
@@ -77,13 +138,16 @@
                             Completed as part of the FreeCodeCamp Front-End Development certification, this project requires one to 
                             display the user's local weather and temperature, as well as an icon or background image that reflects
                             the local weather. There must also be a button that lets the user convert the temperature reading between
-                            Fahrenheit and Celcius units.<br><br>I used the DarkSky.net API to get the weather information and HTML5's 
-                            geolocation capability to get the user's approximate lattitude and longitude.
-
+                            Fahrenheit and Celcius units.<br><br>I used the browser's Navigator interface to get the user's 
+                            approximate lattitude and longitude and then used that data to get the user's local weather from the 
+                            DarkSky.net API. Once the data is returned, the current weather icon string is used to determine what 
+                            background to display to the user. The DarkSky.net API does reject CORS, but I was able to avoid this issue 
+                            by using a heroku API.
                         </p>
                     </div>
+                <div class="row">
                     <div class="col-sm-6">
-                        <img src="Assets/Random_Quote_Project.png" alt="" class="left" id="Random_Quote">
+                        <img src="Assets/Random_Quote_Project.png" alt="" class="right" id="Random_Quote">
                         <p class="js-hide-desktop js-hide-mobile" id="project-description">
                             Click image again to return to the starting list.<br>
                             <a href="https://codepen.io/frmysantana/full/rjKqvv/"
@@ -102,12 +166,36 @@
                             may take a while for a quote to load.
                         </p>
                     </div>
+                    <div class="col-sm-6">
+                        <img src="Assets/Swiss_Tournament_Image.png" alt="" class="left" id="Swiss_Tournament">
+                        <p class="js-hide-desktop js-hide-mobile" id="project-description">
+                            Click image again to return to the starting list.<br>
+                            <a href="https://github.com/frmysantana/Swiss_Tournament_Project"
+                             target="_blank">See GitHub repository.</a>
+                            <br><br>
+                            This project was completed for my "Intro to Programming Nanodegree" certificate from 
+                            Udacity.com. For the final project, one had to choose one of five tracks (Front-End, 
+                            Back-End, Data Analysis, iOS Development, or Android Development), go through a 
+                            summarized section of that track and complete a project. I choose the Back-End track. 
+                            <br><br>This project required me to build a database and Python script that could be 
+                            used to manage a Swiss-Style tournament. In such as tournament, players are not 
+                            eliminated after losing. Instead, each player is matched with another player with as 
+                            close a win record as possible in the next round. It is assumed that an even number 
+                            of players are involved. The database had to contain the names, id's, win/loss record, 
+                            and matches played of the players. The python script had to be able to delete all of 
+                            the players, add players, return each players' overall standings, update the database 
+                            with the results of the latest matches, and return the match pairings for the next
+                            round once the current round was completed. My script had to pass an additional python 
+                            script of tests. I also had to write an acceptable README file for the files.
+                            <br><br>
+                        </p>
+                    </div>
                 </div> 
             </div>
             <hr>
             <div id="Contact">
                 <h3>Contact</h3>
-                <p>Feel free to email me at frmysantana@yahoo.com. Below are links to my GitHub and LinkedIn profiles.</p>
+                <p class="text-center">Feel free to email me at <strong>frmysantana@yahoo.com</strong>. Below are links to my GitHub and LinkedIn profiles.</p>
                 <div class="row">
                     <div class="col-xs-6">
                         <a href="https://github.com/frmysantana" target="_blank">
