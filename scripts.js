@@ -16,23 +16,25 @@ $(document).ready(function() {
   mql.addListener(screenTest);
 
   // Toggle image and description when on mobile.  
-  $("figure").click(function() {
+  $("#fremy-image").click(function() {
     if (window.innerWidth <= 768) {
-      $("figure").fadeToggle(200, 'linear');
-      $("div p").delay(200).fadeToggle(200, 'linear');
+      $("#fremy-image").fadeToggle(200, 'linear');
+      $("#fremy-figure-caption").fadeToggle(200, 'linear');
+      $("#fremy-description").delay(200).fadeToggle(200, 'linear');
     } 
   });
 
-  $("div p").click(function() {
+  $("#fremy-description").click(function() {
     if (window.innerWidth <= 768) {
-      $("div p").fadeToggle(200, 'linear');
-      $("figure").delay(200).fadeToggle(200, 'linear');
+      $("#fremy-description").fadeToggle(200, 'linear');
+      $("#fremy-image").delay(200).fadeToggle(200, 'linear');
+      $("#fremy-figure-caption").fadeToggle(200, 'linear');
     }
   });
 
   // Toggle project description
   $("#Projects img").click(function(e) {
-    var projects = $("#Projects img"), selectedProjIndex;
+    var projects = $("#Projects img");
     
     // Toggle the other projects' visibilities on tablet-and-up screen sizes
     if (window.innerWidth >= 768) {
@@ -40,27 +42,27 @@ $(document).ready(function() {
         if (projects[i].id !== e.target.id) {
             $(projects[i]).parent().fadeToggle(200, 'linear');
         } else {
-          selectedProjIndex = i + 1;
+          var selectedProjIndex = i + 1;
         }
       }
-    }
-  
-    // Toggle centering the clicked project and showing description
-    if (projects.length % 2 === 1) {
-      if (selectedProjIndex % 2 === 1 && selectedProjIndex !== 1) {
-        $(e.currentTarget).toggleClass("right");
-        $(e.currentTarget).toggleClass("selected-project");
+
+      // Toggle centering the clicked project and showing description
+      if (projects.length % 2 === 1) {
+        if (selectedProjIndex % 2 === 1 && selectedProjIndex !== 1) {
+          $(e.currentTarget).toggleClass("right");
+          $(e.currentTarget).toggleClass("selected-project");
+        } else {
+          $(e.currentTarget).toggleClass("left");
+          $(e.currentTarget).toggleClass("selected-project");
+        }
       } else {
-        $(e.currentTarget).toggleClass("left");
-        $(e.currentTarget).toggleClass("selected-project");
-      }
-    } else {
-      if (selectedProjIndex % 2 === 1 ) {
-        $(e.currentTarget).toggleClass("right");
-        $(e.currentTarget).toggleClass("selected-project");
-      } else {
-        $(e.currentTarget).toggleClass("left");
-        $(e.currentTarget).toggleClass("selected-project");
+        if (selectedProjIndex % 2 === 1 ) {
+          $(e.currentTarget).toggleClass("right");
+          $(e.currentTarget).toggleClass("selected-project");
+        } else {
+          $(e.currentTarget).toggleClass("left");
+          $(e.currentTarget).toggleClass("selected-project");
+        }
       }
     }
 
