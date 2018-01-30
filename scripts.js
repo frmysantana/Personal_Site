@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // Hack approach. Fix with enquire.js.
-
   var body = document.querySelector('body');
   
   var mql = window.matchMedia('(min-width: 768px)');
@@ -44,22 +42,29 @@ $(document).ready(function() {
         } else {
           selectedProjIndex = i + 1;
         }
-    }
+      }
     }
   
     // Toggle centering the clicked project and showing description
-    if (selectedProjIndex % 2 === 1 ) {
-      $(e.currentTarget).toggleClass("left");
-      $(e.currentTarget).toggleClass("selected-project");
-    } else if (selectedProjIndex < projects.length) {
-      $(e.currentTarget).toggleClass("right");
-      $(e.currentTarget).toggleClass("selected-project");
+    if (projects.length % 2 === 1) {
+      if (selectedProjIndex % 2 === 1 && selectedProjIndex !== 1) {
+        $(e.currentTarget).toggleClass("right");
+        $(e.currentTarget).toggleClass("selected-project");
+      } else {
+        $(e.currentTarget).toggleClass("left");
+        $(e.currentTarget).toggleClass("selected-project");
+      }
     } else {
-      $(e.currentTarget).toggleClass("center");
-      $(e.currentTarget).toggleClass("selected-project");
+      if (selectedProjIndex % 2 === 1 ) {
+        $(e.currentTarget).toggleClass("right");
+        $(e.currentTarget).toggleClass("selected-project");
+      } else {
+        $(e.currentTarget).toggleClass("left");
+        $(e.currentTarget).toggleClass("selected-project");
+      }
     }
 
     var paragraph = $($(e.currentTarget.offsetParent).children()[1]);
-    paragraph.fadeToggle('200', 'linear');
+    paragraph.toggleClass("hide");
   });
 });
