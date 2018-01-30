@@ -6,6 +6,7 @@
 button {
   background-color: rgb(51, 119, 255);
   font-size: 20px;
+  color: black;
 }
 
 .fa-github {
@@ -23,6 +24,10 @@ footer {
   margin-top: 30px;
   padding: 30px;
   text-align: center;
+}
+
+.hide {
+  display: none;
 }
 
 hr {
@@ -54,15 +59,6 @@ h1 {
 
 /*Styles for tablet size and up. Alphabetical order.*/
 @media screen and (min-width: 768px) {
-  button[type="submit"] {
-    position: relative;
-    top: -150px;
-    right: -8.5vw;
-    border-radius: 10px;
-    font-size: 30px;
-    color: white;
-  }
-
   .center, .selected-project {
     transition: margin .2s linear .1s;
     margin-bottom: 20px;
@@ -98,30 +94,10 @@ h1 {
     width: 40vw;
   }
 
-  input {
-    border-radius: 5px;
-    border-style: none;
-    background-color: rgb(235, 235, 235);
-    font-size: 20px;
-    width: 40vw;
-    margin-right: 21vw;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-left: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  input[placeholder="Name"] {
-    margin-top: 0;
-  }
-
-  .js-hide-desktop {
-    display: none;
-  }
-
   .left {
     float: left;
+    margin-bottom: 25px;
+    margin-top: 25px;
   }
 
   li>a {
@@ -142,31 +118,13 @@ h1 {
   
   .right {
     float: right;
-  }
-
-  textarea {
-    border-radius: 5px;
-    border-style: none;
-    background-color: rgb(235, 235, 235);
-    font-size: 20px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    padding-left: 30px;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    width: 60vw;
+    margin-bottom: 25px;
+    margin-top: 25px;
   }
 }
 
 /*Mobile styles*/
 @media screen and (max-width: 767px) {
-  button[type="submit"] {
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    margin-top: 22px;
-    width: 25%;
-  }
-
   figcaption {
     text-align: center;
   }
@@ -198,20 +156,13 @@ h1 {
     width: 90%;
   }
 
-  input, textarea {
-    background-color: rgb(235, 235, 235);
-    border-radius: 2px;
-    border-style: none;
-    font-size: 17px;
-    margin: 8px 15% 8px 0;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-top: 5px;
-    width: 70%;
+  .hide-mobile {
+    display: none;
   }
 
-  .js-hide-mobile {
-    display: none;
+  li a {
+    color: rgb(43, 0, 0);
+    font-size: 15px;
   }
 
   #project-description {
